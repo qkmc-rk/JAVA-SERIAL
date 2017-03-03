@@ -1,0 +1,4 @@
+﻿  org_cat_jni_SerialPort_SerialPort.cpp
+e:\vs2015 projects\serial_port\serial_port\org_cat_jni_serialport_serialport.cpp(158): warning C4267: “参数”: 从“size_t”转换到“jsize”，可能丢失数据
+e:\vs2015 projects\serial_port\serial_port\org_cat_jni_serialport_serialport.cpp(159): warning C4267: “参数”: 从“size_t”转换到“jsize”，可能丢失数据
+  Serial_Port.vcxproj -> E:\VS2015 Projects\Serial_Port\x64\Debug\Serial_Port.dll

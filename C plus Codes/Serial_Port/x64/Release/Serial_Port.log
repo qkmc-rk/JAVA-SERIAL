@@ -1,0 +1,10 @@
+﻿  serialport.cpp
+serialport.cpp(32): warning C4018: “<”: 有符号/无符号不匹配
+serialport.cpp(144): warning C4267: “参数”: 从“size_t”转换到“DWORD”，可能丢失数据
+    正在创建库 E:\VS2015 Projects\Serial_Port\x64\Release\Serial_Port.lib 和对象 E:\VS2015 Projects\Serial_Port\x64\Release\Serial_Port.exp
+  正在生成代码
+  3 of 221 functions ( 1.4%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  Serial_Port.vcxproj -> E:\VS2015 Projects\Serial_Port\x64\Release\Serial_Port.dll

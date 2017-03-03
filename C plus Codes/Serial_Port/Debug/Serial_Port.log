@@ -1,0 +1,5 @@
+﻿  serialport.cpp
+e:\vs2015 projects\serial_port\serial_port\serialport.cpp(32): warning C4018: “<”: 有符号/无符号不匹配
+  org_cat_jni_SerialPort_SerialPort.cpp
+  正在生成代码...
+  Serial_Port.vcxproj -> E:\VS2015 Projects\Serial_Port\Debug\Serial_Port.dll
