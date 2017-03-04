@@ -24,9 +24,15 @@ public class ReadAndInsertData {
 	}
 	//插入温度和湿度的一条记录
 	public boolean insertTandH(double temp,double hum){
-		String sql = "insert into tempandhum(temp,hum)values(?,?)";
+		
+		String sql1 = "create table if not Exists tempandhum ('data_time' timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,'temp' double(12,0) DEFAULT NULL,'hum' double(12,0) DEFAULT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
+		String sql2 = "insert into tempandhum(temp,hum)values(?,?)";
 		try {
-			PreparedStatement pstmt = conn.prepareStatement(sql);
+			//这两句代码用于创建数据表
+			PreparedStatement pstmt = conn.prepareStatement(sql1);
+			pstmt.executeUpdate();
+			
+			pstmt = conn.prepareStatement(sql2);
 			pstmt.setDouble(1, temp);
 			pstmt.setDouble(2, hum);
 			int x = pstmt.executeUpdate();

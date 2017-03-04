@@ -249,7 +249,8 @@ public class MainAvtivity extends JFrame {
 				if(ReadAndInsertData.conn == null){
 					JOptionPane.showMessageDialog(null, "数据库未成功连接,无法操作!");
 					return;
-				}	
+				}
+				
 				int port = Integer.parseInt((comboBox.getSelectedItem().toString().substring(3)));
 				System.out.println(port);
 				sp.getHandle(port);
@@ -258,7 +259,7 @@ public class MainAvtivity extends JFrame {
 				int _byte = Integer.parseInt((String)BytesizeComboBox.getSelectedItem());
 				int _par = Integer.parseInt((String)ParitycomboBox.getSelectedItem());
 				int _stop = Integer.parseInt((String)StopBitscomboBox.getSelectedItem());
-				System.out.println("BaudRatio:"+Baud);
+				//System.out.println("BaudRatio:"+Baud);
 				sp.startPort(Baud,_par,_stop,_byte);
 				ReadPortTextField.setText(ReadPortTextField.getText()+"\n"+"成功取得串口句柄\n");
 				//下面就是不停地读取数据了
@@ -283,7 +284,7 @@ public class MainAvtivity extends JFrame {
 								String hum = "0";
 								temp = portData.substring(0, 2);
 								hum = portData.substring(3,5);
-								System.out.println(temp+"    "+hum);
+								//System.out.println(temp+"    "+hum);
 								PreparedStatement pstmt = ReadAndInsertData.conn.prepareStatement("insert into tempandhum(temp,hum)values(?,?)");
 								pstmt.setDouble(1, Double.parseDouble(temp));
 								pstmt.setDouble(2, Double.parseDouble(hum));
